@@ -16,7 +16,6 @@ function Home() {
         let res = await axios.get(
           `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
         );
-        console.log(res.data);
         setPokemonInfo(res.data);
       }
     }
