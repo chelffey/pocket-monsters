@@ -8,6 +8,31 @@
 }
 
 .section {
-  width: auto;
+  min-width: 280px;
   text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgb(131, 131, 131);
+  width: 75%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(31, 24, 44);
+  color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 0;
+}
+
+button:hover {
+  background-color: rgb(13, 160, 18);
+  cursor: pointer;
 }

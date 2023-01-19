@@ -47,9 +47,13 @@ function Home() {
         <p>A pocket full of Pokemon...</p>
       </div>
       <div className="section">
-        <h3>Search for a pokemon</h3>
+        <h3>Search</h3>
         <p>You can search by name or pokedex id.</p>
-        <input type="text" onChange={getInputPokemon} />
+        <input
+          type="text"
+          onChange={getInputPokemon}
+          placeholder="Search by name or Pokedex ID..."
+        />
         <button
           onClick={() => {
             setSearchTerm(inputPokemon);

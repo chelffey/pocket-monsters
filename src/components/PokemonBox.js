@@ -1,6 +1,8 @@
+import "./PokemonBox.css";
+
 export default function PokemonBox(props) {
   return (
-    <div>
+    <div className="box">
       <h1>{props.info.name}</h1>
       <img
         src={`${props.info.sprites.back_shiny}`}
@@ -20,7 +22,11 @@ export default function PokemonBox(props) {
       <p>Abilities:</p>
       <ul>
         {props.info.abilities.map((a) => {
-          return <li> {a.ability.name}</li>;
+          return (
+            <li>
+              {a.ability.name} {a.is_hidden && " (hidden)"}
+            </li>
+          );
         })}
       </ul>
       <p>height: {props.info.height} decimetres</p>
