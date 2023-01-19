@@ -7,16 +7,28 @@ function Home() {
   const [inputPokemon, setInputPokemon] = useState(null);
   const [searchTerm, setSearchTerm] = useState(null);
   const [pokemonInfo, setPokemonInfo] = useState(null);
+  const [searchStatus, setsearchStatus] = useState(null);
 
   useEffect(() => {
     // runs once at start and every time searchTerm is updated
     async function requestPokemonData() {
+      setsearchStatus();
       if (searchTerm) {
-        console.log(searchTerm);
-        let res = await axios.get(
-          `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
-        );
-        setPokemonInfo(res.data);
+        try {
+          setsearchStatus("Searching databases far and wide...");
+          let res = await axios.get(
+            `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
+          );
+          setPokemonInfo(res.data);
+          setsearchStatus("");
+        } catch (error) {
+          if (error.response && error.response.status === 404) {
+            setsearchStatus(
+              searchTerm +
+                " was not found in the Pokedex. Try a different spelling."
+            );
+          }
+        }
       }
     }
     requestPokemonData();
@@ -34,6 +46,7 @@ function Home() {
       </div>
       <div className="section">
         <h3>Search for a pokemon</h3>
+        <p>You can search by name or pokedex id.</p>
         <input type="text" onChange={getInputPokemon} />
         <button
           onClick={() => {
@@ -42,9 +55,10 @@ function Home() {
         >
           Search
         </button>
+        <p>{searchStatus}</p>
       </div>
       <div className="section">
-        {pokemonInfo && <PokemonBox name={searchTerm} info={pokemonInfo} />}
+        {pokemonInfo && <PokemonBox info={pokemonInfo} />}
       </div>
     </div>
   );
