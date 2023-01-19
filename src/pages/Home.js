@@ -21,6 +21,7 @@ function Home() {
           );
           setPokemonInfo(res.data);
           setsearchStatus("");
+          console.log(res.data);
         } catch (error) {
           if (error.response && error.response.status === 404) {
             setsearchStatus(
