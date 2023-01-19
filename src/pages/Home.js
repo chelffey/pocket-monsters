@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./pages.css";
 import PokemonBox from "../components/PokemonBox";
+import axios from "axios";
 
 function Home() {
   const [inputPokemon, setInputPokemon] = useState(null);
   const [searchTerm, setSearchTerm] = useState(null);
+  const [pokemonInfo, setPokemonInfo] = useState(null);
+
+  useEffect(() => {
+    // runs once at start and every time searchTerm is updated
+    async function requestPokemonData() {
+      if (searchTerm) {
+        console.log(searchTerm);
+        let res = await axios.get(
+          `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
+        );
+        console.log(res.data);
+        setPokemonInfo(res.data);
+      }
+    }
+    requestPokemonData();
+  }, [searchTerm]);
 
   function getInputPokemon(input) {
     setInputPokemon(input.target.value);
-    console.log(input.target.value);
   }
 
   return (
@@ -29,7 +45,7 @@ function Home() {
         </button>
       </div>
       <div className="section">
-        {searchTerm && <PokemonBox name={searchTerm} type="fire" />}
+        {pokemonInfo && <PokemonBox name={searchTerm} info={pokemonInfo} />}
       </div>
     </div>
   );
