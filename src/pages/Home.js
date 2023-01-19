@@ -24,8 +24,9 @@ function Home() {
         } catch (error) {
           if (error.response && error.response.status === 404) {
             setsearchStatus(
-              searchTerm +
-                " was not found in the Pokedex. Try a different spelling."
+              '"' +
+                searchTerm +
+                '" was not found in the Pokedex. Try a different spelling.'
             );
           }
         }
