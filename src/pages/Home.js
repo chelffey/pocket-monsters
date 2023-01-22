@@ -43,10 +43,6 @@ function Home() {
   return (
     <div className="pageContainer">
       <div className="section">
-        <h1>Pocket Monsters</h1>
-        <p>A pocket full of Pokemon...</p>
-      </div>
-      <div className="section">
         <h3>Search</h3>
         <p>You can search by name or pokedex id.</p>
         <input
