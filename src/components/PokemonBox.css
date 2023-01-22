@@ -1,6 +1,30 @@
 .box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
   border: 2px solid rgb(131, 131, 131);
   padding: 0 30px 10px 30px;
   border-radius: 10px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  width: 250px;
+}
+
+.box > button {
+  display: block;
+}
+
+.movesListGrid {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  margin-top: 20px;
+}
+
+.move {
+  border: 2px grey solid;
+  margin: 2px;
+  padding: 3px 0px 3px 0px;
+  border-radius: 5px;
 }
