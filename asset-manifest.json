@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pocket-monsters/static/css/main.6d88554d.css",
-    "main.js": "/pocket-monsters/static/js/main.9ba76560.js",
+    "main.css": "/pocket-monsters/static/css/main.32bbbe22.css",
+    "main.js": "/pocket-monsters/static/js/main.25bbf15a.js",
     "static/js/787.808b8574.chunk.js": "/pocket-monsters/static/js/787.808b8574.chunk.js",
     "index.html": "/pocket-monsters/index.html",
-    "main.6d88554d.css.map": "/pocket-monsters/static/css/main.6d88554d.css.map",
-    "main.9ba76560.js.map": "/pocket-monsters/static/js/main.9ba76560.js.map",
+    "main.32bbbe22.css.map": "/pocket-monsters/static/css/main.32bbbe22.css.map",
+    "main.25bbf15a.js.map": "/pocket-monsters/static/js/main.25bbf15a.js.map",
     "787.808b8574.chunk.js.map": "/pocket-monsters/static/js/787.808b8574.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d88554d.css",
-    "static/js/main.9ba76560.js"
+    "static/css/main.32bbbe22.css",
+    "static/js/main.25bbf15a.js"
   ]
 }
