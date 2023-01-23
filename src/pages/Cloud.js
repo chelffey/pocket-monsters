@@ -15,13 +15,13 @@ export default function Cloud() {
     fighting: { bg: "brown", text: "white" },
     poison: { bg: "purple", text: "white" },
     ground: { bg: "sienna", text: "white" },
-    rock: { bg: "tan", text: "white" },
+    rock: { bg: "tan", text: "black" },
     psychic: { bg: "violet", text: "white" },
     ice: { bg: "aquamarine", text: "black" },
     bug: { bg: "olivedrab", text: "white" },
     ghost: { bg: "darkblue", text: "white" },
     steel: { bg: "darkslategrey", text: "white" },
-    dragon: { bg: "slateblue", text: "white" },
+    dragon: { bg: "indigo", text: "white" },
     dark: { bg: "#331800", text: "white" },
     fairy: { bg: "pink", text: "black" },
   };
@@ -42,19 +42,27 @@ export default function Cloud() {
   }, []);
 
   function handleMouseHover(e) {
-    console.log(e.target.id);
     const id = e.target.id;
     async function requestPokemonDetails() {
       try {
         let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
-        console.log(res.data.types[0].type.name);
+
+        // colour by types
+        const typeA = res.data.types[0].type.name;
+        const numTypes = res.data.types.length;
+        e.target.style.backgroundColor = colorBank[typeA].bg;
+        e.target.style.color = colorBank[typeA].text;
+        if (numTypes === 1) {
+          e.target.style.borderColor = colorBank[typeA].bg;
+        } else if (numTypes === 2) {
+          const typeB = res.data.types[1].type.name;
+          e.target.style.borderColor = colorBank[typeB].bg;
+        }
       } catch (e) {
         console.log("getting pokemon failed", e);
       }
     }
     requestPokemonDetails();
-    e.target.style.backgroundColor = colorBank.electric;
-    e.target.style.borderColor = colorBank.default;
   }
 
   return (

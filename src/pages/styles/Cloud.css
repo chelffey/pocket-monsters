@@ -10,9 +10,9 @@
 }
 
 .cloudWord:hover {
-  background-color: green;
-  border-color: green;
-  color: white;
+  background-color: white;
+  border-color: black;
+  color: black;
 }
 
 .cloud {
