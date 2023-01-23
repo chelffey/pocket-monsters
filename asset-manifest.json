@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pocket-monsters/static/css/main.811d7e54.css",
-    "main.js": "/pocket-monsters/static/js/main.e693313d.js",
+    "main.css": "/pocket-monsters/static/css/main.e05591f0.css",
+    "main.js": "/pocket-monsters/static/js/main.447a7b25.js",
     "static/js/787.808b8574.chunk.js": "/pocket-monsters/static/js/787.808b8574.chunk.js",
     "static/media/chikorita-192.png": "/pocket-monsters/static/media/chikorita-192.f260f8910fd7eeed2173.png",
     "index.html": "/pocket-monsters/index.html",
-    "main.811d7e54.css.map": "/pocket-monsters/static/css/main.811d7e54.css.map",
-    "main.e693313d.js.map": "/pocket-monsters/static/js/main.e693313d.js.map",
+    "main.e05591f0.css.map": "/pocket-monsters/static/css/main.e05591f0.css.map",
+    "main.447a7b25.js.map": "/pocket-monsters/static/js/main.447a7b25.js.map",
     "787.808b8574.chunk.js.map": "/pocket-monsters/static/js/787.808b8574.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.811d7e54.css",
-    "static/js/main.e693313d.js"
+    "static/css/main.e05591f0.css",
+    "static/js/main.447a7b25.js"
   ]
 }
