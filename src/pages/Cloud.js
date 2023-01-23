@@ -25,6 +25,25 @@ export default function Cloud() {
     dark: { bg: "#331800", text: "white" },
     fairy: { bg: "pink", text: "black" },
   };
+  const pokemonSuffixesToExclude = [
+    "-mega",
+    "-alola",
+    "-galar",
+    "-galar-standard",
+    "-gmax",
+    "-hisui",
+    "-plumage",
+    "-mode",
+    "-build",
+    "-totem",
+    "-breed",
+    "-crowned",
+    "-mega-y",
+    "mega-x",
+    "-therian",
+    "-starter",
+    "-cap",
+  ];
 
   useEffect(() => {
     async function requestPokemonList() {
@@ -32,8 +51,16 @@ export default function Cloud() {
         let res = await axios.get(
           `https://pokeapi.co/api/v2/pokemon/?limit=2000`
         );
-        setAllPokemon(res.data.results);
-        console.log(res.data.results);
+        // filter out certain pokemon entries
+        // alternatively, in future collate entries that start with the same thing
+        const list = res.data.results;
+        const newList = list.filter(
+          (w) =>
+            !pokemonSuffixesToExclude.some((e) => {
+              return w.name.endsWith(e);
+            })
+        );
+        setAllPokemon(newList);
       } catch (e) {
         console.log("Pokemon request failed:", e);
       }
