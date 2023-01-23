@@ -1,4 +1,5 @@
 import "./Toolbar.css";
+import { NavLink } from "react-router-dom";
 
 export default function Toolbar() {
   return (
@@ -8,6 +9,25 @@ export default function Toolbar() {
         <h2>Pocket Monsters</h2>
         <p>A pocket full of Pokemon...</p>
       </div>
+      <NavLink className="button" activeClassName="activeButton" to="/" exact>
+        Search
+      </NavLink>
+      <NavLink
+        className="button"
+        activeClassName="activeButton"
+        to="/cloud"
+        exact
+      >
+        Cloud
+      </NavLink>
+      <NavLink
+        className="button"
+        activeClassName="activeButton"
+        to="/party"
+        exact
+      >
+        Party
+      </NavLink>
     </div>
   );
 }
