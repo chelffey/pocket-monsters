@@ -1,5 +1,7 @@
 import "./PokemonBox.css";
 import { useState } from "react";
+import { colorBank } from "../resources/pokemonTypes";
+import "../pages/styles/Cloud.css";
 
 export default function PokemonBox(props) {
   // pokemon moves
@@ -26,9 +28,19 @@ export default function PokemonBox(props) {
           />
 
           <p>
-            type:
             {props.info.types.map((a) => {
-              return <span> {a.type.name}</span>;
+              return (
+                <span
+                  className="cloudWord"
+                  style={{
+                    backgroundColor: colorBank[a.type.name]["bg"],
+                    borderColor: colorBank[a.type.name]["bg"],
+                    color: colorBank[a.type.name]["text"],
+                  }}
+                >
+                  {a.type.name}
+                </span>
+              );
             })}
           </p>
           <p>Abilities:</p>

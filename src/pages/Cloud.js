@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import PokemonBox from "../components/PokemonBox";
 import Modal from "../components/Modal";
 import axios from "axios";
+import { colorBank, pokemonSuffixesToExclude } from "../resources/pokemonTypes";
 
 export default function Cloud() {
   const [allPokemon, setAllPokemon] = useState(null);
@@ -11,45 +12,6 @@ export default function Cloud() {
   const [featurePokemon, setFeaturePokemon] = useState(null);
   const [featureIsActive, setFeatureIsActive] = useState(false);
   const pokemonFetchedRef = useRef(false);
-  const colorBank = {
-    electric: { bg: "gold", text: "black" },
-    grass: { bg: "limegreen", text: "white" },
-    normal: { bg: "grey", text: "white" },
-    fire: { bg: "orangered", text: "white" },
-    water: { bg: "blue", text: "white" },
-    flying: { bg: "skyblue", text: "black" },
-    fighting: { bg: "brown", text: "white" },
-    poison: { bg: "purple", text: "white" },
-    ground: { bg: "sienna", text: "white" },
-    rock: { bg: "tan", text: "black" },
-    psychic: { bg: "violet", text: "white" },
-    ice: { bg: "aquamarine", text: "black" },
-    bug: { bg: "olivedrab", text: "white" },
-    ghost: { bg: "darkblue", text: "white" },
-    steel: { bg: "darkslategrey", text: "white" },
-    dragon: { bg: "indigo", text: "white" },
-    dark: { bg: "#331800", text: "white" },
-    fairy: { bg: "pink", text: "black" },
-  };
-  const pokemonSuffixesToExclude = [
-    "-mega",
-    "-alola",
-    "-galar",
-    "-galar-standard",
-    "-gmax",
-    "-hisui",
-    "-plumage",
-    "-mode",
-    "-build",
-    "-totem",
-    "-breed",
-    "-crowned",
-    "-mega-y",
-    "mega-x",
-    "-therian",
-    "-starter",
-    "-cap",
-  ];
 
   useEffect(() => {
     async function requestPokemonList() {
