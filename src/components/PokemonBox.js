@@ -19,10 +19,12 @@ export default function PokemonBox(props) {
         <div className="padding">
           <h1>{props.info.name}</h1>
           <img
+            className="sprite"
             src={`${props.info.sprites.back_shiny}`}
             alt={props.info.name + " sprite"}
           />
           <img
+            className="sprite"
             src={`${props.info.sprites.front_default}`}
             alt={props.info.name + " shiny sprite"}
           />
