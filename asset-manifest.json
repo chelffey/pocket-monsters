@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pocket-monsters/static/css/main.dcb6970f.css",
-    "main.js": "/pocket-monsters/static/js/main.b3317cf9.js",
+    "main.css": "/pocket-monsters/static/css/main.33d87ebb.css",
+    "main.js": "/pocket-monsters/static/js/main.39fce255.js",
     "static/js/787.808b8574.chunk.js": "/pocket-monsters/static/js/787.808b8574.chunk.js",
     "static/media/chikorita-192.png": "/pocket-monsters/static/media/chikorita-192.f260f8910fd7eeed2173.png",
     "index.html": "/pocket-monsters/index.html",
-    "main.dcb6970f.css.map": "/pocket-monsters/static/css/main.dcb6970f.css.map",
-    "main.b3317cf9.js.map": "/pocket-monsters/static/js/main.b3317cf9.js.map",
+    "main.33d87ebb.css.map": "/pocket-monsters/static/css/main.33d87ebb.css.map",
+    "main.39fce255.js.map": "/pocket-monsters/static/js/main.39fce255.js.map",
     "787.808b8574.chunk.js.map": "/pocket-monsters/static/js/787.808b8574.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcb6970f.css",
-    "static/js/main.b3317cf9.js"
+    "static/css/main.33d87ebb.css",
+    "static/js/main.39fce255.js"
   ]
 }
