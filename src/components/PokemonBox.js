@@ -17,11 +17,11 @@ export default function PokemonBox(props) {
         <h1>{props.info.name}</h1>
         <img
           src={`${props.info.sprites.back_shiny}`}
-          alt={props.name + " sprite"}
+          alt={props.info.name + " sprite"}
         />
         <img
           src={`${props.info.sprites.front_default}`}
-          alt={props.name + " shiny sprite"}
+          alt={props.info.name + " shiny sprite"}
         />
 
         <p>
@@ -46,15 +46,15 @@ export default function PokemonBox(props) {
       </div>
 
       <button onClick={handleShowMoves}>
-        {showMoves ? "Hide Moves" : "Show Moves"}
+        {showMoves ? "Hide Moveset" : "Show Moveset"}
       </button>
-
-      <div className="movesListGrid">
-        {showMoves &&
-          props.info.moves.map((move) => {
+      {showMoves && (
+        <div className="movesListGrid">
+          {props.info.moves.map((move) => {
             return <div className="move">{move.move.name}</div>;
           })}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

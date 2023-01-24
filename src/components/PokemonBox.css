@@ -10,6 +10,7 @@
   padding: 0 30px 10px 30px;
   border-radius: 10px;
   width: 250px;
+  background-color: white;
 }
 
 .box > button {
@@ -19,7 +20,9 @@
 .movesListGrid {
   display: grid;
   grid-template-columns: 150px 150px;
-  margin-top: 20px;
+  margin: 20px 0px 50px 0px;
+  overflow-y: scroll;
+  height: 200px;
 }
 
 .move {
@@ -27,4 +30,5 @@
   margin: 2px;
   padding: 3px 0px 3px 0px;
   border-radius: 5px;
+  background-color: white;
 }
