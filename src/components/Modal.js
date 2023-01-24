@@ -1,10 +1,17 @@
 import "./Modal.css";
 
-export default function Modal(props) {
+const Modal = (props) => {
+  const visibilityFunction = props.setVisibility;
+  const handleTurnOffModal = () => {
+    visibilityFunction(false);
+  };
+
   return (
     <div className="modalContainer">
-      <h2>HIII</h2>
       {props.children}
+      <button onClick={handleTurnOffModal}>Close Modal</button>
     </div>
   );
-}
+};
+
+export default Modal;

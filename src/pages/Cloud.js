@@ -103,7 +103,7 @@ export default function Cloud() {
           ...newPokemon,
         }));
       } catch (e) {
-        console.log("getting pokemon failed", e);
+        console.log("getting pokemon list failed", e);
       }
     }
     requestPokemonDetails();
@@ -142,7 +142,7 @@ export default function Cloud() {
 
       <h3>Available Pokemon</h3>
       {featureIsActive && (
-        <Modal>
+        <Modal setVisibility={setFeatureIsActive}>
           <PokemonBox info={featurePokemon} />
         </Modal>
       )}
