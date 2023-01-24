@@ -7,10 +7,15 @@
 
 .card {
   border: 2px solid rgb(131, 131, 131);
-  padding: 0 30px 10px 30px;
+
   border-radius: 10px;
-  width: 250px;
+  width: 320px;
+  padding: 5px;
   background-color: white;
+}
+
+.padding {
+  padding: 0 30px 10px 30px;
 }
 
 .box > button {
